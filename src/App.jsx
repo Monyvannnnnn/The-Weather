@@ -6,6 +6,7 @@ import Loading from "./components/Loading";
 import Searchbar from "./components/Searchbar";
 
 import mountainBackground from './assets/mountain.jpg';
+import API_KEY from './config'; // Import API_KEY from config.js
 
 export default function App() {
   const [weather, setWeather] = useState(null);
@@ -15,7 +16,7 @@ export default function App() {
   const [city, setCity] = useState("Phnom Penh"); // Default city
 
   useEffect(() => {
-    const API_KEY = import.meta.env.VITE_API_KEY;
+
     const API_URL = `https://api.openweathermap.org/data/2.5`;
 
     const fetchWeatherData = async () => {
